@@ -26,7 +26,7 @@ WHITE = pygame.Color('white')
 class Sprite(pygame.sprite.Sprite):
 
   # Constructor method
-  def __init__(self, color, height, width):
+  def __init__(self, color, height, width):# this wil create a sprite with specified color, height, and width
     # Call to the parent class (Sprite) constructor
     super().__init__()
     # Create the sprite's surface with dimensions and color
@@ -37,7 +37,7 @@ class Sprite(pygame.sprite.Sprite):
     # Set initial velocity with random direction
     self.velocity = [random.choice([-1, 1]), random.choice([-1, 1])]
 
-  # Method to update the sprite's position
+  # Method to update the sprite's position 
   def update(self):
     # Move the sprite by its velocity
     self.rect.move_ip(self.velocity)
@@ -71,7 +71,7 @@ def change_background_color():
 # Create a group to hold the sprite
 all_sprites_list = pygame.sprite.Group()
 # Instantiate the sprite
-sp1 = Sprite(WHITE, 20, 30)
+sp1 = Sprite(WHITE, 20, 30)# sprite will be white initially, 20 pixels tall and 30 pixels wide
 # Randomly position the sprite
 sp1.rect.x = random.randint(0, 480)
 sp1.rect.y = random.randint(0, 370)
