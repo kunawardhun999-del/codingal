@@ -31,13 +31,13 @@ pygame.display.set_caption("Sprite Collision")
 all_sprites = pygame.sprite.Group()
 # Create two sprites
 # Create sprites
-sprite1 = Sprite(pygame.Color('black'), 20, 30)
+sprite1 = Sprite(20, 30, pygame.Color('black'))
 sprite1.rect.x, sprite1.rect.y = random.randint(
     0, SCREEN_WIDTH - sprite1.rect.width), random.randint(
     0, SCREEN_HEIGHT - sprite1.rect.height)
 all_sprites.add(sprite1)
 
-sprite2 = Sprite(pygame.Color('red'), 20, 30)
+sprite2 = Sprite(20, 30, pygame.Color('red'))
 sprite2.rect.x, sprite2.rect.y = random.randint(
     0, SCREEN_WIDTH - sprite2.rect.width), random.randint(
     0, SCREEN_HEIGHT - sprite2.rect.height)
