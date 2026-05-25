@@ -62,16 +62,16 @@ while running:
             won = True
 
 # Drawing
-screen.blit(background_image, (0, 0))
-all_sprites.draw(screen)
+    screen.blit(background_image, (0, 0))
+    all_sprites.draw(screen)
 
 # Display win message
-if won:
-    win_text = font.render("You win!", True, pygame.Color('black'))
-    screen.blit(win_text, ((SCREEN_WIDTH - win_text.get_width()) // 2,
-    (SCREEN_HEIGHT - win_text.get_height()) // 2))
+    if won:
+        win_text = font.render("You win!", True, pygame.Color('black'))
+        screen.blit(win_text, ((SCREEN_WIDTH - win_text.get_width()) // 2,
+        (SCREEN_HEIGHT - win_text.get_height()) // 2))
 
-pygame.display.flip()
-clock.tick(90)
+    pygame.display.flip()
+    clock.tick(90)
 
 pygame.quit()
