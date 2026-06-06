@@ -10,7 +10,15 @@ window = Tk()
 window.title("Welcome app")
 window.geometry("400x400")
 def display():
-  print('Welcome')
+  name = name_entry.get()
+  global message
+  message = 'Welcome to the apllication\nTodays date is: '  
+  greet = 'Hello '+name+'\n'
+
+  text_box.insert(END, greet)
+  text_box.insert(END, message)
+  text_box.insert(END, date.today())
+
 lbl = Label(text='Welcome App', fg='white', bg='black', 
 height=2, width=200)
 lbl.pack()
@@ -28,6 +36,7 @@ btn.pack()
 
 text_box = Text(height=3)
 text_box.pack()
+
 
 # start the gui event loop
 window.mainloop()
